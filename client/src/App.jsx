@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const App = () => {
   return (
-    <div>Welcome to Chat Flix</div>
-  )
-}
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
 
-export default App
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
