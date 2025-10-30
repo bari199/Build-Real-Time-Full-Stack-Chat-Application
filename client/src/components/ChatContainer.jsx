@@ -35,7 +35,8 @@ const ChatContainer = ({selectedUser,setSelectedUser}) => {
             <div key={index} className={`flex items-end gap-2 justify-end ${msg.senderId !== '680f50e4f10f3cd28382ecf9' && 'flex-row-reverse'}`} >
               {
                 msg.image ? (
-                  <img src={msg.image} alt="" />
+                  <img src={msg.image} alt="message" 
+                  className='max-w-[180px] max-h-[180px] object-cover rounded-lg mb-8' />
                 ):(
                   <p className={`p-2 max-w-[200px] md:text-sm font-light rounded-lg mb-8 break-all bg-violet-500/30 text-white ${msg.senderId === '680f50e4f10f3cd28382ecf9' ? 'rounded-br-none' : 'rounded-bl-none'}`} >{msg.text}</p>
                 )}
